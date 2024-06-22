@@ -1,77 +1,91 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-*{
+
+/* Global reset and box model */
+* {
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
 }
-.font-montserrat{
-     font-family: "Montserrat", sans-serif;
+
+/* Font classes */
+.font-montserrat {
+    font-family: "Montserrat", sans-serif;
 }
-.font-open-sans{
-   font-family: "Open Sans", sans-serif;
+.font-open-sans {
+    font-family: "Open Sans", sans-serif;
 }
-.bg-img{
-  background-image: url('/assets/images/png/bg-img.png');
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 810px;
-  width: 100%;
+
+/* Background image styling */
+.bg-img {
+    background-image: url('/assets/images/png/bg-img.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 810px;
+    width: 100%;
 }
-.overflow-hidden{
+
+/* Utility classes */
+.overflow-hidden {
     overflow: hidden;
 }
-.min-h-screen{
+.min-h-screen {
     min-height: 100vh;
 }
-.logo{
+.logo {
     max-width: 368px;
 }
-.flex{
+.flex {
     display: flex;
 }
-.justify-center{
+.justify-center {
     justify-content: center;
 }
-.items-center{
+.items-center {
     align-items: center;
 }
-.max-w-544{
+.max-w-544 {
     max-width: 544px;
 }
-.mx-auto{
+.mx-auto {
     margin: 0 auto;
 }
-.text-center{
+.text-center {
     text-align: center;
 }
-.px-4{
-    padding:0 16px ;
+.px-4 {
+    padding: 0 16px;
 }
-.opacity70{
+.opacity70 {
     opacity: 0.7;
 }
-.pt-2{
+.heading-pt {
     padding-top: 8px;
 }
-.mt-4{
+.mt-4 {
     padding-top: 16px;
 }
-.pt-10{
+.contact-pt {
     padding-top: 40px;
 }
-.links-gap{
-    gap:15.4px;
+.links-gap {
+    gap: 15.4px;
 }
-.links-hover{
-   transition: all 200ms linear !important;
+.links-hover {
+    z-index: 1;
+    transition: all 200ms linear !important;
 }
-.links-hover:hover{
-   scale: 1.1;
+.links-hover:hover {
+    transform: scale(1.1); /* Corrected property name */
 }
-.white-box{
+.text-decoration{
+    text-decoration: underline;
+}
+/* White box styling */
+.white-box {
     width: 70px;
     height: 70px;
     background-color: white;
@@ -80,74 +94,89 @@
     box-shadow: 0px 4px 16.6px 0px #8058B3;
     position: absolute;
     bottom: 52px;
-    right:43px;
+    right: 43px;
 }
-.music{
-position: absolute;
-right: 0;
-bottom: 0;
-pointer-events: none;
+
+/* Media player and speaker icons positioning */
+.music {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
 }
-.speker{
-position: absolute;
-pointer-events: none;
-left: 0;
-bottom: 0;
+.speker {
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
 }
+
+/* Text with background image clip */
 .text-img {
-  background: url('/assets/images/png/text-bg.png');
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  animation: move-img 10s infinite alternate linear;
+    background: url('/assets/images/png/text-bg.png');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    background-size: cover;
+    animation: move-img 10s infinite alternate linear;
 }
+
+/* Animation for text background image */
 @keyframes move-img {
-   0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 0% 20%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 0% 20%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
-@media (max-width:768px) {
-    .max-w-544{
+
+/* Responsive design breakpoints */
+@media (max-width: 768px) {
+    .max-w-544 {
         max-width: 500px;
     }
-    .white-box{
+    .white-box {
         width: 50px;
         height: 50px;
         bottom: 30px;
-        right:30px;
+        right: 30px;
     }
-    .music{
-max-width: 200px;
+    .music {
+        max-width: 200px;
+    }
+    .speker {
+        max-width: 200px;
+    }
+    .contact-pt {
+        padding-top: 30px;
+    }
 }
-.speker{
-max-width: 200px;
-}
-.pt-10{
-    padding-top: 30px;
-}
-}
-@media (max-width:640px) {
-    .logo{
-    max-width: 300px;
-}
-.white-box{
-    bottom: 20px;
-    right:20px;
-}
-   .music{
-max-width: 170px;
-}
-.speker{
-max-width: 170px;
-}
-.pt-10{
-    padding-top: 20px;
-}
+
+@media (max-width: 640px) {
+    .logo {
+        max-width: 300px;
+    }
+    .white-box {
+        bottom: 20px;
+        right: 20px;
+    }
+    .music {
+        max-width: 170px;
+    }
+    .speker {
+        max-width: 170px;
+    }
+    .contact-pt {
+        padding-top: 20px;
+    }
+    .text-img {
+        background-size: 100% 320%; 
+    }
 }
