@@ -20,7 +20,7 @@
 
 /* Background image styling */
 .bg-img {
-    background-image: url('/assets/images/png/bg-img.png');
+    background-image: url('/assets/images/webp/bg-img.webp');
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
@@ -115,7 +115,7 @@
 
 /* Text with background image clip */
 .text-img {
-    background: url('/assets/images/png/text-bg.png');
+    background: url('/assets/images/webp/text-bg.webp');
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
